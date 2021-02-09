@@ -31,7 +31,7 @@ class PredictionController extends Controller
 
         try {
             $client = new \GuzzleHttp\Client();
-            $endpoint = 'http://0.0.0.0:5000/classify';
+            $endpoint = 'http://192.168.100.2:5000/classify';
             $file               = $request->image_to_test;
             $file_path          = $file->getPathname();
             $file_mime          = $file->getMimeType('image');
