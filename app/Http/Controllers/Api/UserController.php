@@ -62,4 +62,10 @@ class UserController extends Controller
             response()->json(['ok' => false, 'msg' => "Prediction was not inserted successfully. Please try again"]));
 
     }
+
+    public function details()
+    {
+        $user = Auth::user();
+        return response()->json(['success' => $user], $this->successStatus);
+    }
 }

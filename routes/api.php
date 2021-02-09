@@ -20,8 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('login', 'Api\UserController@login');
 Route::post('register', 'Api\UserController@register');
 Route::group(['middleware' => 'auth:api'], function(){
-    Route::post('record_prediction', 'Api\UserController@record_prediction');
+    Route::post('details', 'Api\UserController@details');
 });
+Route::post('record_prediction', 'Api\UserController@record_prediction');
 
 //Predictions made
 Route::get('/get_predictions','Api\BackendApiController@get_predictions');
