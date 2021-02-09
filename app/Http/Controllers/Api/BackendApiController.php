@@ -8,7 +8,7 @@ use Carbon\Carbon;
 
 class BackendApiController extends Controller
 {
-    //get predictions
+    //get prediction
     public function get_predictions(){
         $user_id = auth()->id();
         $predictions = Prediction::with('users')->where('user_id',$user_id)->get();
