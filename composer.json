@@ -26,9 +26,11 @@
         "phpunit/phpunit": "^8.5"
     },
     "config": {
+        "process-timeout": 600,
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "github-protocols": ["https"]
     },
     "extra": {
         "laravel": {
