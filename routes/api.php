@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+Route::post('login', 'Api\UserController@login');
+Route::post('register', 'Api\UserController@register');
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('record_prediction', 'Api\UserController@record_prediction');
 });
+
+//Predictions
+Route::get('/get_predictions','Api\BackendApiController@get_predictions');
+
