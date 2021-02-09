@@ -23,6 +23,6 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::post('record_prediction', 'Api\UserController@record_prediction');
 });
 
-//Predictions
+//Predictions made
 Route::get('/get_predictions','Api\BackendApiController@get_predictions');
 
